@@ -1,224 +1,96 @@
-# ♻️ Smart Waste Recycling System
+# Smart Waste AI Dashboard 🗑️🤖
 
-An IoT-based smart waste management system that monitors waste-bin levels, displays bin status, and supports efficient waste collection through route optimization.
+A next-generation, IoT-driven waste management system designed for urban efficiency. This dashboard uses real-time telemetry and AI analytics to predict overflow, optimize routes, and reduce environmental impact.
 
-## 📌 Overview
+---
 
-The **Smart Waste Recycling System** combines IoT sensors with a web application to monitor waste bins and improve the efficiency of waste collection.
+## 🌟 Key Features
 
-An **HC-SR04 ultrasonic sensor** connected to an **ESP8266** is used to monitor the waste level. The sensor data is processed through a **FastAPI backend** and displayed through a **React and TypeScript frontend**.
+- **Real-time Monitoring:** Track bin fill levels across multiple zones (e.g., Saibaba Colony, RS Puram) via an interactive IoT uplink.
+- **Predictive Analytics:** AI-powered "Synaptic Hotzones" predict overflow probabilities with high accuracy using Groq-based statistical modeling.
+- **Dynamic Route Optimization:** Intelligent scheduling for collection trucks based on live priority levels.
+- **Sustainability Hub:** Track CO2 reduction and ROI on environmental impact initiatives.
+- **Admin Control:** Comprehensive management of physical bin infrastructure and fleet operations.
 
-## ✨ Features
+## 🏗️ Architecture
 
-* 🗑️ Waste-bin level monitoring
-* 📊 Bin status visualization
-* 🚨 Waste collection alerts
-* 📍 Bin location visualization
-* 🗺️ Collection route visualization
-* 🚛 Route optimization
-* 📡 IoT sensor integration
-* 💻 Interactive web dashboard
+### Frontend (User Interface)
+- **Framework:** [React 18](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for modern, responsive glassmorphism design.
+- **Visualizations:** [Recharts](https://recharts.org/) for neural flow and predictive radar charts.
+- **Mapping:** [React Leaflet](https://react-leaflet.js.org/) for real-time fleet tracking.
+- **Icons:** [Lucide React](https://lucide.dev/)
 
-## 🏗️ System Architecture
+### Backend (AI & Logic Engine)
+- **Framework:** [FastAPI](https://fastapi.tiangolo.com/) (Python)
+- **AI Integration:** [Groq Cloud API](https://groq.com/) for fast inference on predictive models.
+- **Database:** Mock DB service with real-time simulation engine.
+- **Utilities:** Pydantic for data validation and `python-dotenv` for configuration.
 
-```mermaid
-flowchart TD
-    A[HC-SR04 Ultrasonic Sensor] --> B[ESP8266]
-    B --> C[FastAPI Backend]
-    C --> D[React + TypeScript Frontend]
-    D --> E[Waste Monitoring Dashboard]
-    D --> F[Bin Status]
-    D --> G[Route Visualization]
-```
+---
 
-## 🔄 System Workflow
-
-```mermaid
-flowchart LR
-    A[Waste Bin] --> B[HC-SR04 Sensor]
-    B --> C[ESP8266]
-    C --> D[FastAPI Backend]
-    D --> E[React Frontend]
-    E --> F[Dashboard]
-    E --> G[Bin Monitoring]
-    E --> H[Route Visualization]
-```
-
-## 🛠️ Technologies Used
-
-### Frontend
-
-* React.js
-* TypeScript
-
-### Backend
-
-* FastAPI
-* Python
-
-### IoT
-
-* ESP8266 / NodeMCU
-* HC-SR04 Ultrasonic Sensor
-
-### Concepts
-
-* Internet of Things (IoT)
-* Route Optimization
-
-## 📡 IoT Integration
-
-The HC-SR04 ultrasonic sensor measures the distance between the sensor and the waste inside the bin.
-
-```mermaid
-flowchart TD
-    A[HC-SR04 Sensor] --> B[Measure Waste Level]
-    B --> C[ESP8266]
-    C --> D[Sensor Data]
-    D --> E[FastAPI Backend]
-    E --> F[React Dashboard]
-```
-
-The ESP8266 collects the sensor readings and communicates the data to the backend, where it can be processed and displayed on the frontend.
-
-## 🗺️ Route Optimization
-
-The system supports route optimization to help waste collectors identify an efficient collection sequence for bins that require attention.
-
-```mermaid
-flowchart LR
-    A[Bin Locations] --> B[Identify Bins for Collection]
-    B --> C[Route Optimization]
-    C --> D[Collection Route]
-    D --> E[Collector]
-```
-
-## 👩‍💻 My Contribution
-
-My primary contribution was focused on **frontend development**.
-
-* Developed the frontend using React and TypeScript.
-* Designed and implemented the waste-monitoring dashboard.
-* Created UI components for displaying bin and waste status.
-* Designed user-friendly interfaces for monitoring waste-management activities.
-* Implemented visualizations for bin information and collection routes.
-
-
-## 📁 Project Structure
-
-```text
-Smart_waste_recycling/
-│
-└── mini prj/
-    └── ai-smart-dustbin/
-        ├── backend/
-        │   ├── main.py
-        │   └── ...
-        │
-        └── frontend/
-            ├── src/
-            ├── public/
-            ├── package.json
-            └── ...
-```
-
-## 🚀 Getting Started
+## 🚀 Setup & Installation
 
 ### Prerequisites
+- **Python 3.8+**
+- **Node.js 18+**
+- **npm** or **yarn**
 
-Make sure you have the following installed:
 
-* Node.js
-* npm
-* Python
-* Git
 
-### Clone the Repository
+   ```
 
-```bash
-git clone https://github.com/Savitha20-06/Smart_waste_recycling.git
-cd Smart_waste_recycling
+
+---
+
+## 📂 Project Structure
+
+```text
+smart-waste-dashboard/
+├── backend/
+│   ├── main.py            # API Gateway & Entry Point
+│   ├── routers/           # Domain-specific API Endpoints
+│   ├── services/          # Business logic and Mock DB
+│   ├── simulation/        # IoT Telemetry Simulator
+│   └── models/            # Pydantic Schemas
+├── frontend/
+│   ├── src/
+│   │   ├── pages/         # Dashboard, Analytics, Routes, Map
+│   │   ├── components/    # Reusable UI widgets & AI Assistant
+│   │   ├── lib/           # Utility functions (cn, etc.)
+│   │   └── App.jsx        # Routing configuration
 ```
 
-### Backend Setup
+---
 
-```bash
-cd "mini prj/ai-smart-dustbin/backend"
-```
+## 🌍 Impact
+This project aims to reduce urban carbon footprints by streamlining waste collection logistics, potentially reducing truck fuel consumption by up to **42.8%** (projected ROI).
 
-Create/activate the virtual environment:
+---
+*Built with ❤️ for a Greener Future.*
 
-```powershell
-.\venv\Scripts\activate
-```
 
-Start the FastAPI server:
 
-```powershell
+
+
+
+
+
+
+
+
+1st terminal 
+
+cd ai-smart-dustbin
+cd backend
+.\venv\scripts\activate
 uvicorn main:app --reload
-```
 
-The backend will run on:
 
-```text
-http://127.0.0.1:8000
-```
+2nd terminal
 
-### Frontend Setup
-
-Open a **new terminal** and run:
-
-```powershell
-cd "mini prj/ai-smart-dustbin/frontend"
-npm install
+cd ai-smart-dustbin
+cd frontend
 npm run dev
-```
 
-The frontend will run on:
-
-```text
-http://localhost:5173
-```
-
-Open the dashboard in your browser:
-
-**http://localhost:5173**
-
-### Dashboard
-
-![Dashboard](Screenshots/dashboard.png)
-
-### Waste Monitoring
-
-![Admin Panel](Screenshots/Admin%20panel.png)
-
-![Routes](Screenshots/Routes.png)
-
-![AI Assistant](Screenshots/AI%20Assistant.png)
-
-### Route Visualization
-
-![Route Optimization](Screenshots/route%20optimization.png)
-
-## 🎯 Project Goal
-
-The goal of this project is to improve waste collection efficiency by combining **IoT-based waste monitoring, web development, and route optimization** into a single smart waste-management system.
-
-## 🔮 Future Enhancements
-
-* Real-time IoT data transmission
-* Mobile application for waste collectors
-* AI-based waste-level prediction
-* Automatic waste classification
-* Advanced route optimization
-* Historical waste analytics
-* Real-time notifications
-
-## 📌 Project Information
-
-**Project Type:** Academic Project
-**Domain:** IoT + Web Development + Smart Waste Management
-
-## 📄 License
-
-This project is developed for academic and educational purposes.
+ Open the dashboard at `http://localhost:5173`.
