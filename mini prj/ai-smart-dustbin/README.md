@@ -95,14 +95,14 @@ flowchart LR
 
 ## 👩‍💻 My Contribution
 
-My primary contribution was focused on **frontend development and integration**.
+My primary contribution was focused on **frontend development**.
 
 * Developed the frontend using React and TypeScript.
 * Designed and implemented the waste-monitoring dashboard.
 * Created UI components for displaying bin and waste status.
-* Integrated the frontend with the FastAPI backend.
-* Implemented visualization of bin information and collection routes.
 * Designed user-friendly interfaces for monitoring waste-management activities.
+* Implemented visualizations for bin information and collection routes.
+
 
 ## 📁 Project Structure
 
@@ -184,29 +184,21 @@ Open the dashboard in your browser:
 
 **http://localhost:5173**
 
-## 📸 Screenshots
-
 ### Dashboard
 
-Add your dashboard screenshot here:
-
-```markdown
 ![Dashboard](Screenshots/dashboard.png)
-```
 
 ### Waste Monitoring
 
-```markdown
-![Waste Monitoring](Screenshots/Admin panel.png)
-![Waste Monitoring](Screenshots/Routes.png)
-![Waste Monitoring](Screenshots/AI Assistant.png)
-```
+![Admin Panel](Screenshots/Admin%20panel.png)
+
+![Routes](Screenshots/Routes.png)
+
+![AI Assistant](Screenshots/AI%20Assistant.png)
 
 ### Route Visualization
 
-```markdown
-![Route Visualization](Screenshots/route optimization.png)
-```
+![Route Optimization](Screenshots/route%20optimization.png)
 
 ## 🎯 Project Goal
 
